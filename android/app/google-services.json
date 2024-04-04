@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "32387048608",
+    "firebase_url": "https://unnathi-behive-default-rtdb.firebaseio.com",
+    "project_id": "unnathi-behive",
+    "storage_bucket": "unnathi-behive.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32387048608:android:3b5a41ab9796c7c75495c5",
+        "android_client_info": {
+          "package_name": "com.spine.behive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32387048608-rsk4sk3i4tcjibekbe0o3kqctv4tjnvg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGLRgb_hUOI_UpWaUWk2STLreKG8mrcqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32387048608-rsk4sk3i4tcjibekbe0o3kqctv4tjnvg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "32387048608-ujbm70ih43hk7eit96m2fnjufehi03pf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.spine.behive"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32387048608:android:faf136858762ae4b5495c5",
+        "android_client_info": {
+          "package_name": "com.spine.behiveAdmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32387048608-rsk4sk3i4tcjibekbe0o3kqctv4tjnvg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGLRgb_hUOI_UpWaUWk2STLreKG8mrcqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32387048608-rsk4sk3i4tcjibekbe0o3kqctv4tjnvg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "32387048608-ujbm70ih43hk7eit96m2fnjufehi03pf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.spine.behive"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

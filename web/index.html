@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="QUAIDE_MILLAT">
+  <meta name="keywords" content="QUAIDE_MILLAT">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="IUML QMC">
+  <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+
+
+
+  <!-- ALTERNATIVE <link rel="icon" type="image/x-icon" href="favicon.ico" /> -->
+  <style>
+.loader-container {
+  position: relative;
+  width: 18rem;
+  height: 18rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.dot-1 {
+  background-color: #3db5e9;
+  z-index: 4;
+  animation: moveDot1 2s infinite ease;
+}
+
+.dot-2 {
+  background-color: #1de1c0;
+  z-index: 3;
+  animation: moveDot2 2s infinite ease;
+}
+
+.dot-3 {
+  background-color: #005cff;
+  z-index: 2;
+  animation: moveDot3 2s infinite ease;
+}
+
+.dot-4 {
+  background-color: #03007f;
+  z-index: 1;
+  animation: moveDot4 2s infinite ease;
+}
+@keyframes moveDot1 {
+  from {
+    transform: rotate(0deg);
+    /* transform-origin: top left */
+    transform-origin: -20px -20px;
+    transform-style: preserve-3D;
+  }
+
+  to {
+    transform: rotate(-360deg);
+    /* transform-origin: top left */
+    transform-origin: -20px -20px;
+    transform-style: preserve-3D;
+  }
+}
+
+@keyframes moveDot2 {
+  from {
+    transform: rotate(0deg);
+    /* transform-origin: top right */
+    transform-origin: 40px -20px;
+    transform-style: preserve-3D;
+  }
+
+  to {
+    transform: rotate(-360deg);
+    /* transform-origin: top right */
+    transform-origin: 40px -20px;
+    transform-style: preserve-3D;
+  }
+}
+
+@keyframes moveDot3 {
+  from {
+    transform: rotate(0deg);
+    /* transform-origin: bottom left */
+    transform-origin: -20px 40px;
+    transform-style: preserve-3D;
+  }
+
+  to {
+    transform: rotate(-360deg);
+    /* transform-origin: bottom left */
+    transform-origin: -20px 40px;
+    transform-style: preserve-3D;
+  }
+}
+
+@keyframes moveDot4 {
+  from {
+    transform: rotate(0deg);
+    /* transform-origin: bottom right */
+    transform-origin: 40px 40px;
+    transform-style: preserve-3D;
+  }
+
+  to {
+    transform: rotate(-360deg);
+    /* transform-origin: bottom right */
+    transform-origin: 40px 40px;
+    transform-style: preserve-3D;
+  }
+}
+</style>
+
+
+  <!-- Main Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+  <title>IUML QMC</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app-check.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script>
+      var firebaseConfig = {
+   apiKey: "AIzaSyDFC9FMSDWeHMAGNT5XKCTfzSDB-W3wMIM",
+   authDomain: "qmch-64ab5.firebaseapp.com",
+   databaseURL: "https://qmch-64ab5-default-rtdb.firebaseio.com",
+   projectId: "qmch-64ab5",
+   storageBucket: "qmch-64ab5.appspot.com",
+   messagingSenderId: "1024553868554",
+   appId: "1:1024553868554:web:82bb51f097f1cd547faef3",
+    measurementId: "G-V4WYKFGBYT"
+};
+      firebase.initializeApp(firebaseConfig);
+
+
+</script>
+<body>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+<!--  <div class="loader-container">-->
+<!--    <div class="dot dot-1"></div>-->
+<!--    <div class="dot dot-2"></div>-->
+<!--    <div class="dot dot-3"></div>-->
+<!--    <div class="dot dot-4"></div>-->
+<!--  </div>-->
+  <script>
+    var serviceWorkerVersion = null;
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
+      }
+      scriptLoaded = true;
+      var scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      document.body.append(scriptTag);
+    }
+
+    if ('serviceWorker' in navigator) {
+      // Service workers are supported. Use them.
+      window.addEventListener('load', function () {
+        // Wait for registration to finish before dropping the <script> tag.
+        // Otherwise, the browser will load the script multiple times,
+        // potentially different versions.
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        navigator.serviceWorker.register(serviceWorkerUrl)
+          .then((reg) => {
+            function waitForActivation(serviceWorker) {
+              serviceWorker.addEventListener('statechange', () => {
+                if (serviceWorker.state == 'activated') {
+                  console.log('Installed new service worker.');
+                  loadMainDartJs();
+                }
+              });
+            }
+            if (!reg.active && (reg.installing || reg.waiting)) {
+              // No active web worker and we have installed or are installing
+              // one for the first time. Simply wait for it to activate.
+              waitForActivation(reg.installing || reg.waiting);
+            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+              // When the app updates the serviceWorkerVersion changes, so we
+              // need to ask the service worker to update.
+              console.log('New service worker available.');
+              reg.update();
+              waitForActivation(reg.installing);
+            } else {
+              // Existing service worker is still good.
+              console.log('Loading app from service worker.');
+              loadMainDartJs();
+            }
+          });
+
+        // If service worker doesn't succeed in a reasonable amount of time,
+        // fallback to plaint <script> tag.
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              'Failed to load app from service worker. Falling back to plain <script> tag.',
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      // Service workers not supported. Just drop the <script> tag.
+      loadMainDartJs();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="one_payu_colorPrimary">#209a4b</color>
+    <color name="one_payu_colorPrimaryDark">#209a4b</color>
+    <color name="one_payu_colorAccent">#209a4b</color>
+    <color name="one_payu_baseTextColor">#ffffff</color>
+
+
+
+</resources>
